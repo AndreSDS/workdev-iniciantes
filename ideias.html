@@ -1,101 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link sizes="16x16" rel="icon"
         href="data:image/png;base64,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">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Casa Criativa</title>
+    <title>Ideias - Casa Criativa</title>
 </head>
 
 <body>
-    <div class="container">
-        <section id="intro">
-            <header>
+
+    <div class="container page-ideas">
+        <header class="header-ideas">
+            <a href="index.html">
                 <img src="image/logo.png" alt="Logo marca Casa Criativa">
-            </header>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li class="button" onclick="onOff()"><a href="#">Nova ideia</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            <main>
-                <p>
-                    Ficar em casa em período longos, não deve
-                    ser nada fácil.
-                </p>
-                <p>
-                    Por isso, iremos catalogar <strong>ideias,
-                        brincadeiras, jogos, filmes, livros,
-                        cursos, dicas</strong> e tudo que for
-                    necessário para tornar esse
-                    momento mais interessante.
-                </p>
-                <p>
-                    Comece clicando em <span>ver ideias</span> para
-                    ver as ideias cadastradas e
-                    contribua <span>adicionando a sua ideia</span>.
-                </p>
-            </main>
+        <section id="title-ideas">
+            <p>em exibição</p>
+            <h1>Ideias</h1>
+        </section>
 
-            <section id="buttons">
-                <button onclick="onOff()"> + Adicioanar ideia </button>
-                <a class="button" href="ideias.html">Ver ideias</a>
+        <main>
+            <section id="page-ideas">
+                <div class="idea">
+                    <img src="image/coding.svg" alt="Imagem de curso de programação">
+
+                    <div class="content">
+                        <h3>Cursos de programação</h3>
+                        <p>Estudo</p>
+
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="image/sport.svg" alt="Imagem de curso de exercícios">
+
+                    <div class="content">
+                        <h3>Exercícios</h3>
+                        <p>Saúde</p>
+
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="image/yoga-mat.svg" alt="Imagem de curso de meditação">
+
+                    <div class="content">
+                        <h3>Meditação</h3>
+                        <p>Mentalidade</p>
+
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="image/indoors.svg" alt="Imagem de karaokê">
+
+                    <div class="content">
+                        <h3>Karaokê</h3>
+                        <p>Diversão em família</p>
+
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                </div>
             </section>
+        </main>
+        <footer>
+            Com ❤️ <a target="blank" href="https://www.rocketseat.com.br">RocketSeat</a>
+        </footer>
 
-            <footer>
-                Com ❤️ <a target="blank" href="https://www.rocketseat.com.br">RocketSeat</a>
-            </footer>
-        </section>
-
-        <section id="ideas">
-            <div class="idea">
-                <img src="image/coding.svg" alt="Imagem de curso de programação">
-
-                <div class="content">
-                    <h3>Cursos de programação</h3>
-                    <p>Estudo</p>
-
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </div>
-                    <a href="ideias.html">Ir para a ideias.</a>
-                </div>
-            </div>
-
-            <div class="idea">
-                <img src="image/sport.svg" alt="Imagem de curso de exercícios">
-
-                <div class="content">
-                    <h3>Exercícios</h3>
-                    <p>Saúde</p>
-
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </div>
-                    <a href="ideias.html">Ir para a ideias.</a>
-                </div>
-            </div>
-
-            <div class="idea">
-                <img src="image/yoga-mat.svg" alt="Imagem de curso de meditação">
-
-                <div class="content">
-                    <h3>Meditação</h3>
-                    <p>Mentalidade</p>
-
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </div>
-                    <a href="ideias.html">Ir para a ideias.</a>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!--Modal-->
+            <!--Modal-->
     <div id="modal" class="hide">
         <div class="content">
             <h1>Nova Ideia</h1>
@@ -133,6 +132,7 @@
 
             </form>
         </div>
+    </div>
     </div>
 </body>
 

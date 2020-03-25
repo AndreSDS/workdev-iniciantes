@@ -8,18 +8,53 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-#container{
+body.hideScroll{
+    overflow: hidden;
+}
+
+.button:hover{
+    text-decoration: none;
+    background-color: #0984e3;
+    color: #fff;
+}
+
+.button{
+    color: white;
+    background-color: #ff5e84;
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: all 400ms ease-in-out;
+    box-shadow: 0px 8px 12px rgb(255,0,92,0.16);
+}
+
+a{
+    color: #ff5e84;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.container{
     width: 80%;
     max-width: 980px;
     margin: 40px auto;
-
     display: flex;
 /*  tentar justify-content: space-between*/
 }
 
 #intro{
     width: 300px;
-    margin-right: 20px;
+    margin-right: 60px;
 }
 
 main{
@@ -45,30 +80,6 @@ button{
 }
 
 button:hover{
-    text-decoration: underline;
-}
-
-button.fat:hover{
-    text-decoration: none;
-}
-
-.fat{
-    color: white;
-    background-color: #ff5e84;
-    width: 150px;
-    height: 40px;
-    border-radius: 6px;
-    box-shadow: 0px 8px 12px rgb(255,0,92,0.16);
-}
-
-a{
-    color: #ff5e84;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-a:hover{
     text-decoration: underline;
 }
 
@@ -124,14 +135,20 @@ footer a{
     background-color: #ff5e84;
     position: absolute;
     top: 0;
-    width: 100vw;
+    bottom: 0;
+    right: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     transition: 400ms ease-in-out;
 }
 
+#modal.addScroll{
+    overflow: auto;
+}
+
 #modal .content{
-    margin: 40px 0;
+    margin-top: 3%;
     color: #fff;
 }
 
@@ -143,7 +160,7 @@ footer a{
 #modal form{
     width: 80%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 10%;
     
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -215,4 +232,63 @@ form button:hover{
 #modal.hide{
     visibility: hidden;
     opacity: 0;
+}
+
+/*Ideas page*/
+.page-ideas {
+    display: block;
+}
+
+header{
+ display: flex;
+ justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li{
+    margin-right: 10px;
+}
+
+nav ul li:last-child{
+    margin: 0;
+}
+
+nav ul li:last-child a{
+    color: #fff;
+    text-decoration: none;
+}
+
+section#title-ideas{
+    text-align: center;
+}
+
+section#title-ideas p{
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title-ideas h1{
+    margin: 0;
+    font-size: 28px;
+}
+
+section#page-ideas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+section#page-ideas .idea{
+    margin: 0;
+}
+
+section#page-ideas,
+section#title-ideas,
+footer{
+    margin-top: 64px;
 }
